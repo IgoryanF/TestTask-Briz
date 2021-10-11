@@ -36,7 +36,7 @@ const ContactForm = ({initialValues, onSubmit, buttonText}) => {
                             <Field
                                 type="text"
                                 name="fullName"
-                                placeholder="Введите данные контакта"
+                                placeholder="Введите фамилию контакта"
                                 value={props.values.fullName}
                                 handleChange={props.handleChange}
                                 handleBlur={props.handleBlur}

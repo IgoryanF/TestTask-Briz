@@ -23,7 +23,7 @@ const ContactItem = ({contact}) => {
             <div className={styles.item}>
                 <div className={styles.info}>
                     <div className={styles.content}>
-                        <h2 className={styles.subTitle}>Данные</h2>
+                        <h2 className={styles.subTitle}>Фамилия</h2>
                         <span className={styles.fullName}>{contact.fullName}</span>
                     </div>
                     <div className={styles.content}>
