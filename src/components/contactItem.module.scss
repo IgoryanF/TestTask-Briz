@@ -1,0 +1,63 @@
+.item {
+  width: 100%;
+  background: white;
+  padding: 8px 5px;
+  display: flex;
+  align-items: center;
+
+  & + .item {
+    margin-top: 8px;
+  }
+}
+
+.info {
+
+  width: 45%;
+  justify-content: space-between;
+  margin-left: 40px;
+  display: flex;
+
+  .subTitle {
+    margin-bottom: 12px;
+  }
+
+  .content {
+  }
+
+  .fullName,
+  .phoneNumber {
+    font-size: 22px;
+    background: #f2f2f2;
+  }
+}
+
+.button {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  &:hover {
+    transform: scale(1.08);
+  }
+
+  &Group {
+    margin-right: 20px;
+    margin-left: auto;
+  }
+
+  &.edit {
+    background: #198754;
+  }
+
+  &.delete {
+    background: #dc3545;
+  }
+
+  + .button {
+    margin-left: 25px;
+  }
+}

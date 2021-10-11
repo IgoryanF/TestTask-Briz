@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.scss';
+import ContactForm from "./components/ContactForm";
+import ContactList from "./components/ContactList";
+import {addContact} from "./redux/contacts-reducer";
+import {useDispatch} from "react-redux";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const dispatch = useDispatch();
+
+    return (
+        <div className={styles.app}>
+            <div className={styles.container}>
+                <h1 className={styles.title}>Форма для добавления контактов</h1>
+                <ContactForm
+                    buttonText="Добавить контакт"
+                    initialValues={{
+                    fullName: '',
+                    phoneNumber: ''
+                }}
+                    onSubmit={(values, {setSubmitting}) => {
+                        setSubmitting(true)
+                        dispatch(addContact({id: new Date().getTime(), ...values}))
+                        setSubmitting(false)
+                    }}
+                />
+                <h1 className={styles.title + " " + styles.bottom}>Список Ваших контактов</h1>
+                <ContactList/>
+            </div>
+        </div>
+    );
 }
 
 export default App;

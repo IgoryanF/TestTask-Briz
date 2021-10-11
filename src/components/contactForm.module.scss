@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  &Container {
+    display: flex;
+    justify-content: center;
+    background: lightgray;
+    width: 100%;
+    margin: 30px 0;
+    border: 3px solid black;
+    border-radius: 6px;
+    padding: 35px 0;
+  }
+}
+
+.formButton {
+  align-self: center;
+  width: 18%;
+  margin-left: 40px;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 10px 0;
+  background: #583c71;
+  color: white;
+  cursor: pointer;
+}
+
+.errorMessage{
+  margin-top: 4px;
+  font-size: 15px;
+  color: red;
+  margin-left: 12px;
+}
